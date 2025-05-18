@@ -1,0 +1,63 @@
+html,
+body {
+  -webkit-app-region: drag;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+body {
+  background: transparent; /* semi-transparent red */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clock {
+  width: 300px;
+  margin: 0 auto;
+  background-color: #eee;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.clock-content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#time {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+
+#day {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+#date {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .clock {
+    background-color: #1f2937;
+    color: white;
+  }
+
+  #date {
+    color: #9ca3af;
+  }
+}
