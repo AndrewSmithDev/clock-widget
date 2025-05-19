@@ -1,6 +1,8 @@
 const { app, BrowserWindow, Tray, Menu } = require("electron");
 const path = require("path");
 
+if (require("electron-squirrel-startup")) app.quit();
+
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 300,
@@ -39,7 +41,7 @@ const createWindow = () => {
     },
   ]);
 
-  tray.setToolTip("My Electron App");
+  tray.setToolTip("Clock Widget");
   tray.setContextMenu(contextMenu);
 };
 
